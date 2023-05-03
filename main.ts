@@ -7,11 +7,11 @@ input.onButtonPressed(Button.B, function () {
 let y = 0
 let x = 0
 joystickbit.initJoystickBit()
-radio.setGroup(13)
+radio.setGroup(48)
 basic.showIcon(IconNames.Yes)
 basic.showString("T")
 basic.forever(function () {
-    x = Math.map(joystickbit.getRockerValue(joystickbit.rockerType.X), 1023, 0, -100, 100)
+    x = Math.map(joystickbit.getRockerValue(joystickbit.rockerType.X), 1023, 0, -30, 30)
     y = Math.map(joystickbit.getRockerValue(joystickbit.rockerType.Y), 1023, 0, 100, -100)
     radio.sendValue("x", x)
     radio.sendValue("y", y)
