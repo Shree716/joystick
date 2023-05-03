@@ -12,7 +12,7 @@ basic.showIcon(IconNames.Yes)
 basic.showString("T")
 basic.forever(function () {
     x = Math.map(joystickbit.getRockerValue(joystickbit.rockerType.X), 1023, 0, -30, 30)
-    y = Math.map(joystickbit.getRockerValue(joystickbit.rockerType.Y), 1023, 0, 100, -100)
+    y = Math.map(joystickbit.getRockerValue(joystickbit.rockerType.Y), 1023, 0, 50, -50)
     radio.sendValue("x", x)
     radio.sendValue("y", y)
     if (joystickbit.getButton(joystickbit.JoystickBitPin.P12)) {
